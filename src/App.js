@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] pb-4'>
+      <div className='h-full font-["Montserrat"] bg-["#FDFDFD"] max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] pb-4'>
         <div className='mt-[1.5rem] block w-full h-auto float-left'>
           <Routes>
             <Route path="/home" element={<LandingPage />} /> 
