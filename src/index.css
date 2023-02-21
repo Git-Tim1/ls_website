@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .default-text{
+        @apply text-base xs:text-[17px] sm:text-lg ;
+    }
+}

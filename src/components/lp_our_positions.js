@@ -45,12 +45,17 @@ const LP_OurPositions = () => {
     
   return (
     <>
-        <div className='mt-5 grid grid-cols-3 gap-3'>
+        <div className='mt-5 hidden xs:grid grid-cols-2 md:grid-cols-3 gap-3'>
             {position_data.map((data, index) => {
-                return((index<6) &&<PositionView topic={data.topic} image={data.picture} link="/test" />)
+                return((index<6) &&<PositionView topic={data.topic} image={data.picture} link="/test" lp={true} />)
             })}
         </div>
-        <div className='text-xl font-bold my-3 flex justify-center bg-white z-3'><Link to="/positionen" >Alle Positionen anzeigen ></Link></div>
+        <div className='mt-5 grid xs:hidden grid-cols-1 gap-3'>
+            {position_data.map((data, index) => {
+                return((index<6) &&<PositionView topic={data.topic} image={data.picture} link="/test" lp={true} />)
+            })}
+        </div>
+        <div className='text-l sm:text-xl font-bold my-2 sm:my-3 flex justify-center bg-white z-3'><Link to="/positionen" >Alle Positionen anzeigen ></Link></div>
     </>
   )
 }

@@ -29,7 +29,7 @@ const NewsPreview = () => {
                 <h1 className='absolute bottom-4 xs:bottom-5 sm:bottom-3 m-l:bottom-4 left-5 xs:left-6 sm:left-4 m-l:left-5 text-xl xs:text-2xl sm:text-lg m-l:text-xl font-extrabold text-white max-w-[80%]'>Diskussionrunde mit Jens Brandenburg</h1>
             </div>
         </div>
-        <div className='text-xl font-bold my-3 flex justify-center bg-white z-3'><a href="#" >Alle Veranstaltungen</a></div>
+        <div className='text-l sm:text-xl font-bold my-2 sm:my-3 flex justify-center bg-white z-3'><a href="#" >Alle Veranstaltungen</a></div>
     </>
   )
 }

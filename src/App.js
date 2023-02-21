@@ -14,14 +14,14 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className='h-full font-["Montserrat"] bg-["#FDFDFD"] max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] pb-4'>
+      <div className='h-full min-h-full font-["Montserrat"] bg-["#FDFDFD"] max-w-[60rem] w-[90%] z-1 mx-auto mt-[4.5rem] pb-4'>
         <div className='mt-[1.5rem] block w-full h-auto float-left'>
           <Routes>
             <Route path="/home" element={<LandingPage />} /> 
             <Route path="/mitglied-werden" element={<BecomeMember />} />
             <Route path="/events" element={<Events />} />
             <Route path="/landesvorstand" element={<Landesvorstand />} />
-            <Route path="/unsere-positionen" element={<OurPositions />} />
+            <Route path="/positionen" element={<OurPositions />} />
             <Route path="/pressemitteilungen" element={<PressReleases />} />
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
