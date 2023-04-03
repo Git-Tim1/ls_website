@@ -4,6 +4,10 @@ import InputField from '../components/input_field'
 
 const BecomeMember = () => {
   const [data, setData] = useState({sex: "male", name: "", e_mail: "", street_and_number: "", place_of_residence:"", zip:"", birth_date: "", bank_name: "",  iban: "", bic: "", checked: false})
+
+  const handleSubmit = () => {
+    console.log("submit")
+  }
   return (
     <div>
       <Heading text="Mitmachen" centered={true} background={false}/>
@@ -21,7 +25,9 @@ const BecomeMember = () => {
       <div className='w-full inline-block'>
           <input type='checkbox' className="float-left mt-5 w-[18px] h-[18px] outline-none border border-gray-200 rounded-none" onChange={e => {e.preventDefault(); setData({...data, checked: !data.checked})}} />
           <p className='w-[calc(100%-28px)] float-right mt-4 font-medium'>Mit der Nutzung dieses Formulars erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch diese Webseite einverstanden.</p>
+          
       </div>
+      <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer mx-auto block bg-magenta text-white px-4 py-1.5 text-lg font-semibold mt-2 hover:drop-shadow-lg' value="Abschicken" />
     </div>
 
   )
