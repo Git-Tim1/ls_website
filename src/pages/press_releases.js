@@ -18,7 +18,7 @@ const article_data = [{
 const PressReleases = () => {
   return (
     <div>
-      <Heading text="Pressemitteilungen" centered={true} background={false} />
+      <Heading text="Neuigkeiten" centered={true} background={false} />
       <div className='mt-6'>
         {
           article_data.map((data, index) => {
