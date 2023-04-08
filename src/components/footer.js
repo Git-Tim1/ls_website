@@ -8,7 +8,7 @@ const Footer = () => {
         <Link className='mr-6 text-base' to="/impressum">Impressum</Link>
         <Link className='mr-6 text-base' to="/datenschutzerklärung">Datenschutzerklärung</Link>
         <a type="file" href='#' download="#">Satzung</a>
-  </div>
+      </div>
     </div>
   )
 }

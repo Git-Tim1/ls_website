@@ -1,9 +1,16 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
-const PersonIntroduction = () => {
+const PersonIntroduction = ({footer}) => {
     let navigate = useNavigate()
     let { personID } = useParams()
+
+    useEffect(() => {
+        document.title = "Landesvorstand - Liberale Schüler BaWü"
+        window.scrollTo(0, 0)
+    
+        footer()
+    }, []);
     return (
         <div className='w-full h-full inline-block min-h-[calc(100vh-208px)] mt-4'>
             <img src={'https://www.ls-bawu.de/Bilder/JanPhilipp.jpeg'} className='
@@ -22,7 +29,7 @@ const PersonIntroduction = () => {
                         w-1/3 float-right ml-4
                     ' />
 
-                <p className='xxs:text-lg text-base mt-1 sm:mt-2 whitespace-pre-line sm:text-justify w-full'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <p className='default-text mt-1 sm:mt-2 whitespace-pre-line sm:text-justify w-full'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
             </div>
         </div>
   )

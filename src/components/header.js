@@ -7,7 +7,7 @@ const Header = () => {
     const [mobileNavBar, setMobileNavBar] = useState(false)
     return (
     <>
-        <header className='w-full h-[5.5rem] drop-shadow-sm bg-white fixed z-20 top-0'>
+        <header className='w-full h-[5.5rem] drop-shadow bg-white fixed z-20 top-0'>
             <div className='h-full max-w-[60rem] w-[90%] sm:w-[95%] md:w-[90%] m-auto font-bold text-[17px] overflow-hidden'>
                 <Link to="/home"><img className='float-left h-[110%]' src={LS_Logo} alt="JU Kirchheim Logo" /></Link>
                 <ul className='float-left h-full hidden sm:flex ml-3 md:ml-5'>
@@ -20,7 +20,7 @@ const Header = () => {
                                 text-accent-color-3'>
                             <ul className='text-black font-semibold'>
                                 <Link to="/positionen"><li className='px-5 py-3 mb-1 bg-decent-blue cursor-pointer hover:bg-magenta hover:text-white duration-150'>Unsere Positionen</li></Link>
-                                <Link to="/pressemitteilungen"><li className='px-5 py-3 mt-1 bg-decent-blue cursor-pointer hover:bg-magenta hover:text-white duration-150'>Pressemitteilungen</li></Link>
+                                <Link to="/news"><li className='px-5 py-3 mt-1 bg-decent-blue cursor-pointer hover:bg-magenta hover:text-white duration-150'>Neuigkeiten</li></Link>
                             </ul>
                         </div>
                     </li>
@@ -84,8 +84,8 @@ export const MobileNavBar = () => {
                     <li className='border-b border-gray-400'><Link to='/unsere-positionen'><div className='w-[85%] mx-auto pb-3 pt-4'>
                         Unsere Positionen
                     </div></Link></li>
-                    <li><Link to='/pressemitteilungen'><div className='w-[85%] mx-auto pt-3 pb-4'>
-                        Pressemitteilungen
+                    <li><Link to='/news'><div className='w-[85%] mx-auto pt-3 pb-4'>
+                        Neuigkeiten
                     </div></Link></li>
                 </ul>
             </div>}

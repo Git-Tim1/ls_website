@@ -3,7 +3,7 @@ import React from 'react'
 const LP_Input = ({inputData, type, placeholderValue}) => {
     return (
         <input type={type} /*onChange={inputDataValue => inputData(inputDataValue.target.value)}*/ 
-        className='w-full mt-4 h-10 border border-gray-10 bg-[#F2F2F2] px-3 focus:outline-none focus:border-magenta' 
+        className='w-full mt-4 h-10 border border-gray-10 bg-[#F2F2F2] focus:bg-white px-3 focus:outline-none focus:border-magenta' 
         placeholder={placeholderValue}
         required 
         />

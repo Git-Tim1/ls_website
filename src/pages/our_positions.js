@@ -1,6 +1,6 @@
-import React from 'react'
-import Heading from '../components/heading'
+import React, { useEffect } from 'react'
 import PositionView from '../components/position_view'
+import Heading from '../components/heading'
 
 const position_data = [{
   topic: 'Digitalisierung',
@@ -41,7 +41,13 @@ const position_data = [{
 ]
 
 
-const OurPositions = () => {
+const OurPositions = ({footer}) => {
+  useEffect(() => {
+    document.title = "Landesvorstand - Liberale Schüler BaWü"
+    window.scrollTo(0, 0)
+
+    footer()
+  }, []);
   return (
     <>
     <Heading text="Unsere Positionen" centered={true} background={false} />

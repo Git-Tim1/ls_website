@@ -1,20 +1,20 @@
-import React from 'react'
-import Header from '../components/header'
+import React, { useEffect } from 'react'
 import Heading from '../components/heading'
 import PersonView from '../components/person_view'
 import {Link} from 'react-router-dom'
 
-const Vorstand_Data = [{
 
+const Landesvorstand = ({ footer }) => {
+  useEffect(() => {
+    document.title = "Landesvorstand - Liberale Schüler BaWü"
+    window.scrollTo(0, 0)
 
-}]
-
-
-const Landesvorstand = () => {
+    footer()
+  }, []);
   return (
     <div>
       <Heading text="Landesvorstand" centered={true} background={false}/>
-      <p className='mt-6'>
+      <p className='mt-6 default-text'>
         Der Landesvorstand leitet den Verband der Liberalen Schüler Baden-Württemberg. Er wird jährlich von unserem Landeskongress gewählt und besteht aus fünf Personen. Der Landesvorsitzende und seine Stellvertreter bilden den geschäftsführenden Vorstand. Darüber hinaus gibt es zwei Schatzmeister und vier Arbeitsgruppen Leiter. Alle Landesvorstandsmitglieder arbeiten ehrenamtlich.
       </p>
       <div className='w-full mt-16 relative'>
