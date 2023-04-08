@@ -66,17 +66,17 @@ const ArticleSide = ({footer}) => {
 
     return (
         <div>
-          {loading ?<div className='fixed w-full -z-20 left-0 top-[5.5rem] h-96 bg-magenta opacity-10'>
+          {loading ?<div className='fixed w-full -z-20 left-0 top-[5.5rem] h-52 3xs:h-64 xs:h-80 md:h-96 bg-magenta opacity-10'>
             <img className='object-cover animate-spin mx-auto mt-40 block h-10 ' src="https://icons8.com/preloaders/img/favicons/favicon-194x194.png" />
           </div> :
-          <img className='fixed w-full -z-20 left-0 top-[5.5rem] h-96 object-cover ' src={"https://api.wrire.com" + data.thumbnail} />}
-          <div className='absolute left-0 w-full bg-white z-10 pt-6 mt-[24rem]'>
+          <img className='fixed w-full -z-20 left-0 top-[5.5rem] h-52 3xs:h-64 xs:h-80 md:h-96 object-cover duration-200' src={"https://api.wrire.com" + data.thumbnail} />}
+          <div className='absolute left-0 w-full bg-white z-10 pt-6 mt-52 3xs:mt-64 xs:mt-80 md:mt-96'>
             <div className='mx-auto max-w-[60rem] w-[90%]'>
               
               {!loading ?
               <div>
-                <h1 className={`font-extrabold text-3xl text-center lg:w-4/5 mx-auto ${loading && 'blur'}`}>{data.title}</h1>
-                <p className={`mt-2 default-text pb-12 ${loading && 'blur-sm'} `}>
+                <h1 className={`font-extrabold text-xl 3xs:text-2xl sm:text-3xl sm:text-center lg:w-4/5 mx-auto`}>{data.title}</h1>
+                <p className={`mt-2 default-text pb-12 `}>
                   {data.content}
                 </p>
               </div> :

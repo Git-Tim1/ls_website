@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import LS_Logo from '../images/Logo.jpeg';
+import LS_Logo from '../files/Logo.jpeg';
 import { AiOutlineMenu, AiOutlineClose, AiFillCaretDown, AiFillCaretRight } from 'react-icons/ai'
 
 const Header = () => {

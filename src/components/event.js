@@ -4,9 +4,11 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 
 const Event = ({Day, Month, EventName, Description}) => {
     const [showMore, setShowMore] = useState(false)
+
+    
     return (
     <a onClick={e => {e.preventDefault(); setShowMore(!showMore)}} href="#">
-    <div className='min-h-[calc(100vh-)] mb-5 w-full xs:w-11/12 sm:w-9/10 md:w-[85%] mx-auto cursor-pointer  skew-y-2 bg-gradient-to-r from-magenta to-[#5800FF] text-white duration-200'>
+    <div className='min-h-[calc(100vh-)] mb-6 w-full xs:w-11/12 sm:w-9/10 md:w-[85%] mx-auto cursor-pointer  skew-y-2 bg-gradient-to-r from-magenta to-[#5800FF] text-white duration-200'>
         <div className='w-full h-32 xs:h-36 md:h-40' >
             <div className='w-[100px] 3xs:w-[105px] xs:w-[120px] sm:w-[140px] h-full float-left flex justify-center items-center duration-200'>
                 <div className='h-auto inline-block'>

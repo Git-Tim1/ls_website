@@ -55,7 +55,7 @@ function App() {
                 <Route path="/neuigkeiten/">
                   <Route path=':newsID' element={<ArticleSide footer={() => setFooter(false)} />} />
                 </Route>
-                <Route path="/positionen" element={<OurPositions footer={() => setFooter(false)}  />} />
+                <Route path="/positionen" element={<OurPositions footer={() => setFooter(true)}  />} />
                 <Route path="/news" element={<News footer={() => setFooter(false)}  />} />
                 <Route path="*" element={<Navigate to="/home" replace />} />
                 <Route path="/kontakt" element={<Contact footer={() => setFooter(false)} />}   />

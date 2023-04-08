@@ -75,7 +75,7 @@ const NewsPreview = () => {
                 }
             </Link>
         </div>
-        <div className='text-l sm:text-xl font-bold my-2 sm:my-3 flex justify-center bg-white z-3'><a href="#" >Alle Veranstaltungen</a></div>
+        <Link to="/news" className='text-l sm:text-xl font-bold my-2 sm:my-3 flex justify-center bg-white z-3'>Alle Neuigkeiten >></Link>
     </>
   )
 }
