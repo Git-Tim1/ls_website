@@ -7,9 +7,9 @@ import DataContext from '../context'
 import Footer from '../components/footer'
 
 
-export const LoadingText = ({x, y, z}) => {
+export const LoadingText = ({x, y, z, h = "h-5"}) => {
   return (
-    <div className='h-5 w-full mt-2 animation rounded'>
+    <div className={`${h} w-full mt-2 animation rounded`}>
       <div className={`background-masker btn-divide-left ${x}`}>
       </div>
       <div className={`background-masker btn-divide-left ${y}`}>

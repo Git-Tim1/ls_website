@@ -11,7 +11,7 @@ var LS_Satzung = require('../files/LS-Satzung.pdf')
 const Footer = ({ absolute = false }) => {
   return(
     <footer className={`inline-block ${absolute && 'absolute'} w-full h-28 mt-8 pt-5 bg-white shadow-3xl shadow-black`}>
-      <div className='max-w-[60rem] w-[90%] sm:w-[95%] md:w-[90%] pl-5 xxs:pl-0 text-base xxs:text-sm xs:text-base font-bold text-magenta'>
+      <div className='max-w-[60rem] w-[90%] sm:w-[95%] md:w-[90%] mx-auto pl-1 3xs:pl-0 text-base xxs:text-sm xs:text-base font-bold text-magenta'>
         <div className='w-full flex flex-col 3xs:flex-row xxs:justify-center gap-1 3xs:gap-3 sm:gap-5'>
           <Link to="/impressum">Impressum</Link>
           <Link to="/datenschutzerklaerung">Datenschutzerklärung</Link>

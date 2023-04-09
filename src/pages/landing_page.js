@@ -14,13 +14,13 @@ const LandingPage = ({ footer }) => {
   }, []);
   return (
     <>
-      <Heading text="Herzlich Wilkommen bei den Liberalen Schülern BaWü" centered={true} background={false} />
+      <Heading devide={false} text="Herzlich Wilkommen bei den Liberalen Schülern BaWü" centered={true} background={false} />
       <NewsPreview />
-      <Heading text="Wer sind wir?" centered={true} background={false} />
+      <Heading mt="mt-12" text="Wer sind wir?" centered={true} background={false} />
       <Introduction />
-      <Heading text="Unsere Positionen" centered={true} background={false} />
+      <Heading mt="mt-12" text="Unsere Positionen" centered={true} background={false} />
       <LP_OurPositions />
-      <Heading text="Jetzt Mitglied werden" centered={true} background={false} />
+      <Heading mt="mt-12" text="Jetzt Mitglied werden" centered={true} background={false} />
       <LP_BecomeMember />
 
     </>

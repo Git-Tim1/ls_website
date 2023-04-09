@@ -22,7 +22,7 @@ const BecomeMember = ({footer}) => {
       
       <div className='absolute left-0 w-full bg-white z-10 mt-52 3xs:mt-64 xs:mt-80 md:mt-96'>
         <div className='mx-auto max-w-[60rem] w-[90%]'>
-          <Heading text="Mitmachen" centered={true} background={false}/>
+          <Heading text="Mitmachen" w='w-20' centered={true} background={false}/>
           <p className='mt-2 sm:mt-4 default-text'>
           Wir Liberalen Schüler wollen Politik und Zeitgeschehen mitgestalten. Dabei stehen für uns Freiheit, Individualität, Eigenverantwortung und Toleranz im Mittelpunkt. Wir wollen Entscheidungen nicht anderen überlassen, sondern unsere Zukunft selbst in die Hand nehmen.
           Du willst Dich für die beste Bildung einsetzen? Dem Fortschritt siehst Du optimistisch entgegen und Digitalisierung und Bürgerrechte sind für Dich kein Gegensatz? Für Dich gehören Globalisierung und Menschenrechte einfach zusammen? Generationengerechtigkeit und Respekt sind für Dich Leitgedanken unserer Gesellschaft? Dann komm zu uns und mach mit. Werde liberaler Schüler – nicht irgendwann, sondern jetzt!

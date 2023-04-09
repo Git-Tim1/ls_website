@@ -43,7 +43,7 @@ const Contact = ({footer}) => {
     }
   return (
     <div className=''>
-        <Heading text="Kontakt" centered={true} background={false}/>
+        <Heading w="w-16" text="Kontakt" centered={true} background={false}/>
         <p className='mt-4 default-text'>
         Du interessierst Dich für die Liberalen Schüler? Du hast Fragen zu unserem Verband? Du möchtest wissen, wann und wo die nächste Veranstaltung in Deiner Nähe stattfindet? Bei all dem sind wir Dir gerne behilflich. Egal ob Du konkrete inhaltliche Fragen zu unseren Themen und Positionen hast oder einfach nur den Kontakt zu uns suchst: Schreibe uns über das unten stehende Kontaktformular eine kurze E-Mail und wir versuchen Dir so schnell wie möglich weiter zu helfen. Das mag vielleicht nicht immer auf Anhieb möglich sein, aber wir garantieren Dir, dass Du auf jede vernünftige Anfrage auch immer eine Rückmeldung erhältst. Also schieß los. Wir freuen uns von Dir zu hören.
         </p>

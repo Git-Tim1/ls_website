@@ -28,7 +28,7 @@ const OurPositions = ({footer}) => {
     </p>
     <div className='mt-6 grid grid-cols-1 xs:grid-cols-2 gap-3'>
             {position_data.map((data, index) => {
-                return(<PositionView topic={data.topic} image={data.picture} link={"/position/" + data.topic.replace(" ", "-") + "&" + index} lp={false} />)
+                return(<PositionView topic={data.topic} image={data.picture} link={"/position/" + data.topic.toLowerCase() + "&" + index} lp={false} />)
             })}
     </div>
     <div className='w-full mt-6 flex'>
