@@ -4,9 +4,10 @@ import Heading from '../components/heading'
 import { Link } from 'react-router-dom'
 
 import DataContext from '../context'
+import Footer from '../components/footer'
 
 
-const LoadingText = ({x, y, z}) => {
+export const LoadingText = ({x, y, z}) => {
   return (
     <div className='h-5 w-full mt-2 animation rounded'>
       <div className={`background-masker btn-divide-left ${x}`}>
@@ -19,30 +20,19 @@ const LoadingText = ({x, y, z}) => {
   )
 }
 
-const NewFooter = () => {
-  return (
-    <div className='w-full py-4 mt-8 bg-white shadow-3xl shadow-black'>
-      <div className='max-w-[60rem] w-full m-auto font-bold text-magenta'>
-        <Link className='mr-6 text-base' to="/impressum">Impressum</Link>
-        <Link className='mr-6 text-base' to="/datenschutzerklärung">Datenschutzerklärung</Link>
-        <a type="file" href='#' download="#">Satzung</a>
-      </div>
-    </div>
-  )
-}
 
 const ArticleSide = ({footer}) => {
     let navigate = useNavigate()
     let { newsID } = useParams()
 
-    const articleData = useContext(DataContext)
 
     const [data, setData] = useState({content: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua", title:"Lorem ipsum dolor sit "})
 
     const [loading, setLoading] = useState(true) 
 
+
     useEffect(() => {
-      if (loading == false) {document.title = data.short_title + " - Liberale Schüler BaW+"}
+      if (loading == false) {document.title = data.short_title + " - Liberale Schüler BaWu"}
     }, [loading])
 
     useEffect(() => {
@@ -50,7 +40,7 @@ const ArticleSide = ({footer}) => {
       window.scrollTo(0, 0)
 
       footer()
-  }, []);
+    }, []);
 
     
     useEffect(() => {
@@ -66,8 +56,8 @@ const ArticleSide = ({footer}) => {
 
     return (
         <div>
-          {loading ?<div className='fixed w-full -z-20 left-0 top-[5.5rem] h-52 3xs:h-64 xs:h-80 md:h-96 bg-magenta opacity-10'>
-            <img className='object-cover animate-spin mx-auto mt-40 block h-10 ' src="https://icons8.com/preloaders/img/favicons/favicon-194x194.png" />
+          {loading ?<div className='fixed flex w-full -z-20 left-0 top-[5.5rem] h-52 3xs:h-64 xs:h-80 md:h-96 bg-magenta opacity-10'>
+            <div className='loader z-20'></div>
           </div> :
           <img className='fixed w-full -z-20 left-0 top-[5.5rem] h-52 3xs:h-64 xs:h-80 md:h-96 object-cover duration-200' src={"https://api.wrire.com" + data.thumbnail} />}
           <div className='absolute left-0 w-full bg-white z-10 pt-6 mt-52 3xs:mt-64 xs:mt-80 md:mt-96'>
@@ -75,13 +65,13 @@ const ArticleSide = ({footer}) => {
               
               {!loading ?
               <div>
-                <h1 className={`font-extrabold text-xl 3xs:text-2xl sm:text-3xl sm:text-center lg:w-4/5 mx-auto`}>{data.title}</h1>
+                <h1 className={`font-extrabold text-xl 3xs:text-2xl sm:text-[27px] mx-auto`}>{data.title}</h1>
                 <p className={`mt-2 default-text pb-12 `}>
                   {data.content}
                 </p>
               </div> :
               <div>
-                <div className='animation h-10 w-3/5 mx-auto rounded'>
+                <div className='animation h-8 sm:h-10 rounded'>
                 </div>
                 <div className='mt-5'>
                   <LoadingText x="left-[15%]" y="left-[50%]" z="left-[90%]" />
@@ -97,8 +87,7 @@ const ArticleSide = ({footer}) => {
               </div>
               }
             </div>
-            
-            <NewFooter />
+            <Footer />
           </div>
         </div>
     )

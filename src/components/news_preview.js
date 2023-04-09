@@ -6,9 +6,9 @@ const NewsPreview = () => {
     const articleData = useContext(DataContext)
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-    if(articleData[0] != ''){
-        setLoading(false)
-      }
+        if(articleData[0] != ''){
+            setLoading(false)
+        }
     }, [articleData])
 
 
@@ -17,7 +17,7 @@ const NewsPreview = () => {
         <div className='relative mt-5 inline-block w-full'>
             <Link to={"/neuigkeiten/" + articleData[0].id} className='relative  w-full sm:w-[49.9%] md:w-[66.5%] float-left group aspect-4/3 xs:aspect-video sm:aspect-2/3 md:aspect-4/3 rounded-sm overflow-hidden shaxow-xl sm:shadow-2xl shadow-zinc-400'>
                 {!loading ? <><img 
-                    className='w-full h-full duration-500 group-hover:w-[105%] group-hover:h-[105%] overflow-hidden object-cover brightness-90 group-hover:brightness-110' 
+                    className='absolute group-hover:min-w-[106%] group-hover:min-h-[106%] group-hover:left-[-3%] group-hover:top-[-3%] left-0 top-0 min-w-full min-h-full duration-500 overflow-hidden object-cover brightness-90 group-hover:brightness-110' 
                     src={"https://api.wrire.com" + articleData[0].thumbnail}
                 />
                 <div className='absolute bg-gradient-to-b from-transparent to-magenta w-full h-full top-0 z-0'></div>
@@ -28,7 +28,7 @@ const NewsPreview = () => {
                     <div className='bg-magenta opacity-20 h-full w-full z-10 '>    
                     </div>
                     <div className='w-full h-full top-0 left-0 absolute flex'>
-                        <div class="loader z-20"></div>
+                        <div className="loader z-20"></div>
                     </div>
                 </div>
                 
@@ -37,7 +37,7 @@ const NewsPreview = () => {
             </Link>
             <Link to={"/neuigkeiten/" + articleData[1].id} className='relative my-4 sm:my-0 w-full sm:w-[49%] md:w-[32.5%] float-right group aspect-4/3 xs:aspect-video sm:aspect-4/3 rounded-sm overflow-hidden shaxow-xl sm:shadow-2xl shadow-zinc-400'>
                 {!loading ? <><img 
-                    className='z-1 w-full h-full duration-500 group-hover:w-[105%] group-hover:h-[105%] overflow-hidden object-cover brightness-90 group-hover:brightness-110' 
+                    className='absolute z-1 min-w-full min-h-full duration-500 group-hover:min-w-[106%] group-hover:min-h-[106%] group-hover:left-[-3%] group-hover:top-[-3%] left-0 top-0 overflow-hidden object-cover brightness-90 group-hover:brightness-110' 
                     src={"https://api.wrire.com" + articleData[1].thumbnail}
                 />
                 <div className='absolute bg-gradient-to-b from-transparent to-magenta w-full h-full top-0 z-2'></div>
@@ -54,10 +54,10 @@ const NewsPreview = () => {
                 </div>
                 }
             </Link>
-            <Link to={"/neuigkeiten/" + articleData[2].id} className='relative sm:absolute group w-full sm:w-[49%] md:w-[32.5%] bottom-0 right-0 float-right groups aspect-4/3 xs:aspect-video sm:aspect-4/3 rounded-sm overflow-hidden shaxow-xl sm:shadow-2xl shadow-zinc-400'>
+            <Link to={"/neuigkeiten/" + articleData[2].id} className='relative overflow-hidden sm:absolute group w-full sm:w-[49%] md:w-[32.5%] bottom-0 right-0 float-right group aspect-4/3 xs:aspect-video sm:aspect-4/3 rounded-sm shaxow-xl sm:shadow-2xl shadow-zinc-400'>
                 {!loading ? <>
                     <img 
-                        className='z-1 w-full h-full duration-500 group-hover:w-[105%] group-hover:h-[105%] overflow-hidden object-cover brightness-90 group-hover:brightness-110' 
+                        className='absolute z-1 min-w-full min-h-full duration-500 group-hover:min-w-[106%] group-hover:min-h-[106%] group-hover:left-[-3%] group-hover:top-[-3%] left-0 top-0 overflow-hidden object-cover brightness-90 group-hover:brightness-110' 
                         src={"https://api.wrire.com" + articleData[2].thumbnail}
                     />
                     <div className='absolute bg-gradient-to-b from-transparent to-magenta w-full h-full top-0 z-2'></div>

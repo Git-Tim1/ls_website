@@ -65,7 +65,7 @@ export const MobileNavBar = ({showNav, changeNavState}) => {
     const [showMore, setShowMore] = useState(false)
     const [showMore1, setShowMore1] = useState(false)
     return(
-        <div className={`absolute w-full h-full bg-gradient-to-tr from-magenta to-[#5800FF] z-[100] top-0 ${showNav ? 'left-0 sm:left-[-120%]' : 'left-[-120%]'} duration-200`}>
+        <div className={`fixed w-full h-full bg-gradient-to-tr from-magenta to-[#5800FF] z-[100] top-0 ${showNav ? 'left-0 sm:left-[-120%]' : 'left-[-120%]'} duration-200`}>
             <div className='h-[5.5rem] w-full border-b border-white'>
                 <div className='w-[90%] h-full mx-auto'>
                     <div className='flex items-center h-full float-right'>
@@ -78,17 +78,17 @@ export const MobileNavBar = ({showNav, changeNavState}) => {
             <div className='w-full'>
                 <div className='w-[85%] mt-8 text-3xl font-black text-white mx-auto'>
                     <a className='hover:text-yellow-300 hover:ml-1 duration-200 inline-block w-full' href="#" onClick={() => setShowMore(!showMore)}>Inhalte</a>
-                    <div className={`border bg-white text-lg text-black mt-1 py-3 rounded ${showMore ? 'hidden' : 'block'}`}>
+                    <div className={`border bg-white text-lg text-black mt-1 py-3 rounded ${showMore ? 'block' : 'hidden'}`}>
                         <Link onClick={() => changeNavState()} to="/positionen" className='hover:text-magenta ml-6 hover:ml-7 mb-1 font-black w-full inline-block duration-200'>Positionen</Link>
                         <Link onClick={() => changeNavState()} to="/news" className='hover:text-magenta  ml-6 hover:ml-7 mt-1 font-black w-full inline-block duration-200'>Neuigkeiten</Link>
                     </div>
                     <a className='hover:text-yellow-300 hover:ml-1 duration-200 inline-block w-full mt-4' href="#" onClick={() => setShowMore1(!showMore1)}>Über uns</a>
-                    <div className={`border bg-white text-lg text-black mt-1 py-3 rounded ${showMore1 ? 'hidden' : 'block'}`} >
+                    <div className={`border bg-white text-lg text-black mt-1 py-3 rounded ${showMore1 ? 'block' : 'hidden'}`} >
                         <Link onClick={() => changeNavState()} to="/landesvorstand" className='hover:text-magenta ml-6 hover:ml-7 pb-1 font-black w-full inline-block duration-200'>Landesvorstand</Link>
                         <Link onClick={() => changeNavState()} to="/events" className='hover:text-magenta ml-6 hover:ml-7 pt-1 font-black w-full inline-block duration-200'>Events</Link>
                     </div>
-                    <Link className='hover:text-yellow-300 hover:ml-1 inline-block w-full duration-200 mt-4' to="/kontakt">Kontakt</Link>
-                    <Link className='hover:text-yellow-300 hover:ml-1 inline-block w-full duration-200 mt-4' to="/mitglied-werden">Mitglied werden</Link>
+                    <Link onClick={() => changeNavState()} className='hover:text-yellow-300 hover:ml-1 inline-block w-full duration-200 mt-4' to="/kontakt">Kontakt</Link>
+                    <Link onClick={() => changeNavState()} className='hover:text-yellow-300 hover:ml-1 inline-block w-full duration-200 mt-4' to="/mitglied-werden">Mitglied werden</Link>
                 </div>
             </div>
         </div>
