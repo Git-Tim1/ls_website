@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Devide = ({w}) => {
   return (
-    <div className={w + ` h-2 bg-magenta mt-4 mx-auto rounded`}></div>
+    <div className={w + ` h-2 mt-3 md:mt-4 mx-auto`}><div className='w-3/5 3xs:w-4/5 xs:w-full mx-auto h-4/5 xs:h-full bg-magenta rounded' ></div></div>
   )
 }
 
