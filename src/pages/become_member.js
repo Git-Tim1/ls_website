@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Footer from '../components/footer'
 import Heading from '../components/heading'
 import InputField from '../components/input_field'
 
@@ -41,6 +42,7 @@ const BecomeMember = ({footer}) => {
           </div>
           <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer mx-auto block bg-magenta text-white px-4 py-1.5 text-lg font-semibold mt-2 hover:drop-shadow-lg' value="Abschicken" />
         </div>
+        <Footer />
       </div>
     </div>
 
