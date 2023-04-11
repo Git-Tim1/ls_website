@@ -9,7 +9,7 @@ const LP_OurPositions = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        if (position_data !== []){setLoading(false)}
+        if (position_data[0] !== " "){setLoading(false)}
     }, [position_data])
     
 
@@ -17,7 +17,7 @@ const LP_OurPositions = () => {
     <>
         <div className='mt-5 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4'>
             {!loading ? <>{position_data.map((data, index) => {
-                return((index<4) &&<PositionView topic={data.topic} image={data.picture} link={"/position/" + data.topic.replace(" ", "-") + "&" + index} lp={true} />)
+                return((index<4) &&<PositionView key={index} topic={data.topic} image={data.picture} link={"/position/" + data.topic.replace(" ", "-") + "&" + index} lp={true} />)
             })}</> : 
             <>
             <div className='relative bg-[#f6f7f8] flex w-auto h-auto group aspect-4/3 3xs:aspect-video xs:aspect-4/3 rounded shadow-sm shadow-zinc-300'>

@@ -5,12 +5,10 @@ import Introduction from '../components/introduction'
 import LP_OurPositions from '../components/lp_our_positions'
 import LP_BecomeMember from '../components/lp_become_member'
 
-const LandingPage = ({ footer }) => {
+const LandingPage = () => {
   useEffect(() => {
-    document.title = "Landesvorstand - Liberale Schüler BaWü"
+    document.title = "Liberale Schüler BaWü"
     window.scrollTo(0, 0)
-
-    footer()
   }, []);
   return (
     <>

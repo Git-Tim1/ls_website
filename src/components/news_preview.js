@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react'
-import DataContext from '../context'
+import { DataContext } from '../context'
 import { Link } from 'react-router-dom'
 
 const NewsPreview = () => {
@@ -47,9 +47,7 @@ const NewsPreview = () => {
                     <div className='bg-magenta opacity-20 h-full w-full z-10 '>    
                     </div>
                     <div className='w-full h-full top-0 left-0 absolute flex'>
-                        <div class="loader z-20">
-
-                        </div>
+                        <div className="loader z-20"></div>
                     </div>
                 </div>
                 }

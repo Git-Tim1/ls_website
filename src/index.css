@@ -21,7 +21,15 @@ body{
     }
 
     .default-heading{
-        @apply lg:text-3xl sm:text-2xl  
+        @apply lg:text-3xl sm:text-2xl;
+    }
+
+    .h-top{
+        @apply 3xs:h-64 xs:h-80 md:h-96;
+    }
+
+    .hover-gradient{
+      @apply hover:text-transparent bg-clip-text hover:bg-gradient-to-r from-magenta to-[#5800FF];
     }
 }
 
@@ -60,6 +68,31 @@ body{
     background-size: 800px 104px;
     position: relative;
 }
+
+.animation-darker{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #e3e3e3 8%, #ababab 18%, #e1e1e1 33%);
+    background-size: 800px 104px;
+    position: relative;
+}
+
+.animation-magenta{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #ef0987 8%, #b90066 18%, #E5007D 33%);
+    background-size: 800px 104px;
+    position: relative;
+}
+
 .background-masker {
     background-color: #fff;
     position: absolute;

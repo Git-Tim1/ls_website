@@ -3,9 +3,9 @@ import {AiOutlineMail, AiOutlineTwitter, AiOutlineInstagram} from 'react-icons/a
 import { Link } from 'react-router-dom'
 
 
-const PersonView = ({name, role, img, email, twitter, instagram, link}) => {
+const PersonView = ({name, role, img, email, twitter, instagram, link, key}) => { 
   return (
-        <div className='mx-auto h-36 3xs:h-40 xs:h-36 sm:h-40 left-0 duration-500 flex justify-center  bg-gradient-to-r from-magenta to-[#5800FF] w-[96%] xs:w-11/12 md:w-4/5 mt-10 skew-y-2 overflow-hidden xs:overflow-visible group'> 
+      <a href={link} key={key} className='mx-auto h-36 3xs:h-40 xs:h-36 sm:h-40 left-0 duration-500 flex justify-center  bg-gradient-to-r from-magenta to-[#5800FF] w-[96%] xs:w-11/12 md:w-4/5 mt-10 skew-y-2 overflow-hidden xs:overflow-visible group'> 
         <div className='float-left w-[36%] sm:w-[35%] m-l:w-1/3  lg:w-[30%] flex justify-center overflwo-hidden'>
           <img src={img} className='absolute opacity-70 xxs:opacity-100 h-[105%] xs:h-[115%] left-0 sm:left-2 float-left bottom-0 duration-200' />
         </div>
@@ -24,7 +24,7 @@ const PersonView = ({name, role, img, email, twitter, instagram, link}) => {
             </div>
           </div>
         </div>
-      </div>
+      </a>
   )
 }
 

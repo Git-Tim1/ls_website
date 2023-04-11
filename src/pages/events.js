@@ -5,14 +5,12 @@ import Event from '../components/event'
 import { EventContext } from '../context'
 
 
-const Events = ({footer}) => {
+const Events = () => {
   const eventData = useContext(EventContext)
 
   useEffect(() => {
     document.title = "Events - Liberale Schüler BaWü"
     window.scrollTo(0, 0)
-
-    footer()
 }, []);
   
 

@@ -1,27 +1,24 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import Heading from '../components/heading'
-import { Link } from 'react-router-dom'
 
-import DataContext from '../context'
 import Footer from '../components/footer'
 
 
-export const LoadingText = ({x, y, z, h = "h-5"}) => {
+export const LoadingText = ({x=0, y=0, z=0, h = "h-5"}) => {
   return (
     <div className={`${h} w-full mt-2 animation rounded`}>
-      <div className={`background-masker btn-divide-left ${x}`}>
+      {(x!=0&&y!=0&&z!=0 )&&<><div className={`background-masker btn-divide-left ${x}`}>
       </div>
       <div className={`background-masker btn-divide-left ${y}`}>
       </div>
       <div className={`background-masker btn-divide-left ${z}`}>
-      </div>
+      </div></>}
     </div>
   )
 }
 
 
-const ArticleSide = ({footer}) => {
+const ArticleSide = ({unmountFooter, mountFooter}) => {
     let navigate = useNavigate()
     let { newsID } = useParams()
 
@@ -39,7 +36,8 @@ const ArticleSide = ({footer}) => {
       document.title = "Artikel - Liberale Schüler BaWü"
       window.scrollTo(0, 0)
 
-      footer()
+      unmountFooter()
+      return() => {mountFooter()}
     }, []);
 
     
@@ -55,7 +53,7 @@ const ArticleSide = ({footer}) => {
     }, [])
 
     return (
-        <div>
+        <article>
           {loading ?<div className='fixed flex w-full -z-20 left-0 top-[5.5rem] h-52 3xs:h-64 xs:h-80 md:h-96 bg-magenta opacity-10'>
             <div className='loader z-20'></div>
           </div> :
@@ -89,7 +87,7 @@ const ArticleSide = ({footer}) => {
             </div>
             <Footer />
           </div>
-        </div>
+        </article>
     )
 }
 

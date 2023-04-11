@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import Heading from '../components/heading'
 import PersonView from '../components/person_view'
 import {Link} from 'react-router-dom'
+import { VorstandContext } from '../context'
 
 
-const Landesvorstand = ({ footer }) => {
+const Landesvorstand = () => {
+  const vorstandData = useContext(VorstandContext)
+
   useEffect(() => {
     document.title = "Landesvorstand - Liberale Schüler BaWü"
     window.scrollTo(0, 0)
-
-    footer()
   }, []);
+  
   return (
     <div>
       <Heading text="Landesvorstand" centered={true} background={false}/>
@@ -18,10 +20,26 @@ const Landesvorstand = ({ footer }) => {
         Der Landesvorstand leitet den Verband der Liberalen Schüler Baden-Württemberg. Er wird jährlich von unserem Landeskongress gewählt und besteht aus fünf Personen. Der Landesvorsitzende und seine Stellvertreter bilden den geschäftsführenden Vorstand. Darüber hinaus gibt es zwei Schatzmeister und vier Arbeitsgruppen Leiter. Alle Landesvorstandsmitglieder arbeiten ehrenamtlich.
       </p>
       <div className='w-full mt-16 relative'>
-        <Link to="/vorstand/jan"><PersonView name="Jan-Philipp Lenhardt"  twitter="https://twitter.com/jan" email="janphilipp@gmail.com" instagram="instagram.com/" role="Landesvorsitzender" img={"https://media.discordapp.net/attachments/1084451122296664075/1084451524509442159/image-removebg-preview_5_1.png?width=816&height=810"} /></Link>
-        <Link to="/ferdiant"><PersonView name="Ferdinand v. Podewils" role="Presse und Öffentlichkeitsarbeit" img="https://media.discordapp.net/attachments/1084451122296664075/1092416416709353543/image-removebg-preview_7_1.png?width=780&height=782" /></Link>
-        <PersonView />
-        <PersonView />
+        {(vorstandData[0] !== " ") ? 
+        <>
+          {
+            vorstandData.map((data, index) => {
+              return <PersonView name={data.name} role={data.role} img={data.image} content={data.content} link={"/vorstand/" + data.name.toLowerCase() + '&' + index}  />
+            })
+          }
+        </> : 
+        <>
+          <div className='mx-auto h-36 3xs:h-40 xs:h-36 sm:h-40 left-0 duration-500 flex bg-gradient-to-r from-magenta to-[#5800FF] w-[96%] xs:w-11/12 md:w-4/5 mt-10 skew-y-2 overflow-hidden xs:overflow-visible group'>
+            <div className='loader'></div>
+          </div>
+          <div className='mx-auto h-36 3xs:h-40 xs:h-36 sm:h-40 left-0 duration-500 flex bg-gradient-to-r from-magenta to-[#5800FF] w-[96%] xs:w-11/12 md:w-4/5 mt-10 skew-y-2 overflow-hidden xs:overflow-visible group'>
+            <div className='loader'></div>
+          </div>
+          <div className='mx-auto h-36 3xs:h-40 xs:h-36 sm:h-40 left-0 duration-500 flex bg-gradient-to-r from-magenta to-[#5800FF] w-[96%] xs:w-11/12 md:w-4/5 mt-10 skew-y-2 overflow-hidden xs:overflow-visible group'>
+            <div className='loader'></div>
+          </div>
+          
+        </>}
       </div>
     </div>
   )

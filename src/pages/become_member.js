@@ -3,7 +3,7 @@ import Footer from '../components/footer'
 import Heading from '../components/heading'
 import InputField from '../components/input_field'
 
-const BecomeMember = ({footer}) => {
+const BecomeMember = ({ unmountFooter, mountFooter}) => {
   const [data, setData] = useState({sex: "male", name: "", e_mail: "", street_and_number: "", place_of_residence:"", zip:"", birth_date: "", bank_name: "",  iban: "", bic: "", checked: false})
 
   const handleSubmit = () => {
@@ -14,8 +14,11 @@ const BecomeMember = ({footer}) => {
     document.title = "Mitmachen - Liberale Schüler BaWü"
     window.scrollTo(0, 0)
 
-    footer()
-}, []);
+    unmountFooter()
+
+    return () => {mountFooter()}
+  }, []);
+  
   
   return (
     <div>

@@ -2,18 +2,14 @@ import React, {useState, useContext, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import ArticleView from '../components/article_view'
 import Heading from '../components/heading'
-import DataContext from '../context'
+import { DataContext } from '../context'
 
-
-
-const News = ({footer}) => {
+const News = () => {
   const articleData = useContext(DataContext)
 
   useEffect(() => {
     document.title = "Landesvorstand - Liberale Schüler BaWü"
     window.scrollTo(0, 0)
-
-    footer()
   }, []);
 
   return (

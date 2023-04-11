@@ -4,7 +4,7 @@ import Heading from '../components/heading'
 import InputField from '../components/input_field'
 import swal from 'sweetalert';
 
-const Contact = ({footer}) => {
+const Contact = () => {
     const [data, setData] = useState({name: "", e_mail: "", message: "", checked: false})
     const [completeData, setCompleteData] = useState(false)
     const navigate = useNavigate();
@@ -13,8 +13,6 @@ const Contact = ({footer}) => {
     useEffect(() => {
         document.title = "Kontakt - Liberale Schüler BaWü"
         window.scrollTo(0, 0)
-
-        footer()
     }, []);
 
     useEffect(() => {

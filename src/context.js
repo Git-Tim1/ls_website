@@ -1,6 +1,5 @@
-import {createContext} from 'react'
-const DataContext = createContext([])
+import { createContext } from 'react'
+export const DataContext = createContext([])
 export const EventContext = createContext([])
 export const PositionContext = createContext([])
-
-export default DataContext
+export const VorstandContext = createContext([])

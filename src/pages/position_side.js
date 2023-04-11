@@ -5,7 +5,7 @@ import { LoadingText } from './article_side'
 import { PositionContext } from '../context'
 import Footer from '../components/footer'
 
-const PositionSide = ({ footer }) => {
+const PositionSide = ({ unmountFooter, mountFooter }) => {
     let navigate = useNavigate()
     let { positionID } = useParams()
     const position_data = useContext(PositionContext)
@@ -21,7 +21,9 @@ const PositionSide = ({ footer }) => {
         let newID = positionID.split("&")[1]
         setID(parseInt(newID))
   
-        footer()
+        unmountFooter()
+
+        return () => {mountFooter()}
     }, []);
 
     useEffect(() => {
@@ -35,7 +37,7 @@ const PositionSide = ({ footer }) => {
     }, [position_data])
 
     return (
-        <div>
+        <container>
           {loading ?
           <div className='fixed flex w-full -z-20 left-0 top-[5.5rem] h-52 3xs:h-64 xs:h-80 md:h-96 bg-magenta opacity-10'>
             <div className='loader z-20'></div>
@@ -75,7 +77,7 @@ const PositionSide = ({ footer }) => {
                 <Footer />
                 </div>
             </div>
-        </div>
+        </container>
     )
 }
 
