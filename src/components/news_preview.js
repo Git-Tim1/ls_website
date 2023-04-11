@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react'
 import { DataContext } from '../context'
 import { Link } from 'react-router-dom'
+import ShowMoreCurves from '../files/showMoreCurves'
 
 const NewsPreview = () => {
     const articleData = useContext(DataContext)
@@ -65,7 +66,7 @@ const NewsPreview = () => {
                     <div className='bg-magenta opacity-20 h-full w-full z-10 '>    
                     </div>
                     <div className='w-full h-full top-0 left-0 absolute flex'>
-                        <div class="loader z-20">
+                        <div className="loader z-20">
 
                         </div>
                     </div>
@@ -73,7 +74,7 @@ const NewsPreview = () => {
                 }
             </Link>
         </div>
-        <Link to="/news" className='text-l sm:text-xl font-bold my-2 sm:my-3 flex justify-center bg-white z-3'>Alle Neuigkeiten >></Link>
+        <Link to="/news" className='default-text font-bold my-3 sm:my-4 flex justify-center bg-white z-3'><p>Alle Neuigkeiten</p> <ShowMoreCurves className='h-4 sm:h-[18px] w-4 sm:w-[18px] mt-1 sm:mt-[5px] ml-1 float-left' /> </Link>
     </>
   )
 }

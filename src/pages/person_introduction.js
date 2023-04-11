@@ -33,9 +33,9 @@ const PersonIntroduction = ({landscape, NoLandscape}) => {
     
     
     return (
-        <div className='w-full h-full inline-block min-h-[calc(100vh-208px)] mt-4 '>
+        <div className='w-full inline-block mt-4 '>
             {!loading ? 
-            <img src={'https://www.ls-bawu.de/Bilder/JanPhilipp.jpeg'} className='
+            <img src={vorstandData[id].image} className='
             fixed top-[5.5rem] left-0 landscape:relative landscape:top-0 h-[calc(100vh-5.5rem)] landscape:h-auto portait:w-full
             portrait:aspect-auto
             landscape:xs:aspect-4/3 landscape:sm:aspect-3/4 

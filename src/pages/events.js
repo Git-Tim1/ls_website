@@ -15,7 +15,7 @@ const Events = () => {
   
 
   return (
-    <div className='min-h-[calc(100vh-208px)] block'>
+    <>
       <Heading w='w-12' text="Events" centered={true} background={false}/>
       <div className='w-full mt-10 md:mt-12 relative'>
         {eventData.map((data, index) => {
@@ -23,7 +23,7 @@ const Events = () => {
         }
           
       </div>
-    </div>
+    </>
   )
 }
 

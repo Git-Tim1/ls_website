@@ -21,7 +21,7 @@ const BecomeMember = ({ unmountFooter, mountFooter}) => {
   
   
   return (
-    <div>
+    <>
       <img className='fixed w-full -z-20 left-0 top-[5.5rem] h-52 3xs:h-64 xs:h-80 md:h-96 object-cover duration-200 ' src="https://www.ls-bawu.de/Bilder/mitgliedwerden.jpeg" />
       
       <div className='absolute left-0 w-full bg-white z-10 mt-52 3xs:mt-64 xs:mt-80 md:mt-96'>
@@ -43,11 +43,11 @@ const BecomeMember = ({ unmountFooter, mountFooter}) => {
               <p className='w-[calc(100%-28px)] float-right mt-4 font-medium'>Mit der Nutzung dieses Formulars erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch diese Webseite einverstanden.</p>
               
           </div>
-          <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer mx-auto block bg-magenta text-white px-4 py-1.5 text-lg font-semibold mt-2 hover:drop-shadow-lg' value="Abschicken" />
+          <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer mb-8 mx-auto block bg-magenta text-white px-4 py-1.5 text-lg font-semibold mt-2 hover:drop-shadow-lg' value="Abschicken" />
         </div>
         <Footer />
       </div>
-    </div>
+    </>
 
   )
 }

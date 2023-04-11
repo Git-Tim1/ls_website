@@ -1,14 +1,13 @@
 import React from 'react'
 import {AiOutlineMail, AiOutlineTwitter, AiOutlineInstagram} from 'react-icons/ai'
-import { Link } from 'react-router-dom'
 
 
 const PersonView = ({name, role, img, email, twitter, instagram, link, key}) => { 
   return (
-      <a href={link} key={key} className='mx-auto h-36 3xs:h-40 xs:h-36 sm:h-40 left-0 duration-500 flex justify-center  bg-gradient-to-r from-magenta to-[#5800FF] w-[96%] xs:w-11/12 md:w-4/5 mt-10 skew-y-2 overflow-hidden xs:overflow-visible group'> 
-        <div className='float-left w-[36%] sm:w-[35%] m-l:w-1/3  lg:w-[30%] flex justify-center overflwo-hidden'>
-          <img src={img} className='absolute opacity-70 xxs:opacity-100 h-[105%] xs:h-[115%] left-0 sm:left-2 float-left bottom-0 duration-200' />
-        </div>
+      <a href={link} key={key} className='mx-auto relative h-36 3xs:h-40 xs:h-36 sm:h-40 left-0 duration-500 flex justify-end  bg-gradient-to-r from-magenta to-[#5800FF] w-[96%] xs:w-11/12 md:w-4/5 mt-10 skew-y-2 overflow-hidden xs:overflow-visible group'> 
+          <div className='absolute h-[105%] xs:h-[115%] left bottom w-full xs:w-[36%] sm:w-[35%] m-l:w-1/3 overflwo-hidden lg:w-[30%] xs:flex justify-center left-0 bottom-0'>
+            <img src={img} className='opacity-70 xxs:opacity-100 h-full duration-200' />
+          </div>
         <div className='float-right absolute xs:relative w-[90%] xs:w-[64%] sm:w-[65%] m-l:w-2/3 lg:w-[70%] flex justify-center h-full duration-200 z-20 right-0'>
           <div className='h-auto my-auto pb-2 pr-4 w-full xxs:w-full'>
             <div className='font-extrabold w-full leading-5 3xs:leading-6 text-xl 3xs:text-2xl md:text-3xl md:leading-7 text-white block duration-200'>

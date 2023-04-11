@@ -43,7 +43,7 @@ function App() {
         setPositionData(response_data)
     })).catch(err => {console.log(err)})
 
-    fetch('https://api.wrire.com/partner/teamsmiley/Vorstand', { // fetch data from backend server
+    fetch('https://api.wrire.com/partner/ls-bawu/Vorstand', { // fetch data from backend server
         method: 'GET',
     }).then((response) =>  response.json().then((response_data) => {
         setVorstandData(response_data)
@@ -59,8 +59,8 @@ function App() {
         <VorstandContext.Provider value={vorstandData}>
           <>
           <Header />
-          <div className='h-full min-h-[calc(100vh-200px)] font-["Montserrat"] bg-["#FDFDFD"] max-w-[60rem] w-[90%] z-1 mx-auto mt-[5.5rem] pb-4'>
-            <div className='inline-block mt-[1.5rem] w-full h-auto float-left'>
+          <div className='min-h-[calc(100vh-200px)] h-full font-["Montserrat"] bg-["#FDFDFD"] max-w-[60rem] w-[90%] z-1 mx-auto mt-[5.5rem] pb-4'>
+            <div className='inline-block min-h-full mt-[1.5rem] w-full h-auto float-left last:mb-8'>
               <Routes>
                 <Route path="/home" element={<LandingPage  />} /> 
                 <Route path="/mitglied-werden" element={<BecomeMember unmountFooter={() => setFooter(false)} mountFooter={() => setFooter(true)}  />} />

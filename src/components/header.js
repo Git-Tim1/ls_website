@@ -62,6 +62,11 @@ const Header = () => {
 export const MobileNavBar = ({showNav, changeNavState}) => {
     const [showMore, setShowMore] = useState(false)
     const [showMore1, setShowMore1] = useState(false)
+
+    useEffect(() => {
+      if (showNav == false){setShowMore(false); setShowMore1(false)}
+    }, [showNav])
+    
     return(
         <nav className={`fixed w-full h-full text-black bg-white z-[100] top-0 ${showNav ? 'left-0 sm:left-[-120%]' : 'top-[-120%]'} duration-200`}>
             <div className='h-[5.5rem] w-full border-b-2 border-magenta'>

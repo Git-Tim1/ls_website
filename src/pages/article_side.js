@@ -58,17 +58,17 @@ const ArticleSide = ({unmountFooter, mountFooter}) => {
             <div className='loader z-20'></div>
           </div> :
           <img className='fixed w-full -z-20 left-0 top-[5.5rem] h-52 3xs:h-64 xs:h-80 md:h-96 object-cover duration-200' src={"https://api.wrire.com" + data.thumbnail} />}
-          <div className='absolute left-0 w-full bg-white z-10 pt-6 mt-52 3xs:mt-64 xs:mt-80 md:mt-96'>
+          <div className='absolute block left-0 w-full bg-white z-10 pt-6 mt-44 3xs:mt-52 xs:mt-72 md:mt-80 )]'>
             <div className='mx-auto max-w-[60rem] w-[90%]'>
               
               {!loading ?
-              <div>
+              <div className='min-h-[calc(100vh-26.5rem)] 3xs:min-h-[calc(100vh-28.5rem)] xs:min-h-[calc(100vh-33.5rem)] md:min-h-[calc(100vh-35.5rem)]'>
                 <h1 className={`font-extrabold text-xl 3xs:text-2xl sm:text-[27px] mx-auto`}>{data.title}</h1>
                 <p className={`mt-2 default-text pb-12 `}>
                   {data.content}
                 </p>
               </div> :
-              <div>
+              <div className='min-h-[calc(100vh-26.5rem)] 3xs:min-h-[calc(100vh-28.5rem)] xs:min-h-[calc(100vh-33.5rem)] md:min-h-[calc(100vh-35.5rem)]'>
                 <div className='animation h-8 sm:h-10 rounded'>
                 </div>
                 <div className='mt-5'>

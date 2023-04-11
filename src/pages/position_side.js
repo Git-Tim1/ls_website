@@ -39,19 +39,19 @@ const PositionSide = ({ unmountFooter, mountFooter }) => {
     return (
         <container>
           {loading ?
-          <div className='fixed flex w-full -z-20 left-0 top-[5.5rem] h-52 3xs:h-64 xs:h-80 md:h-96 bg-magenta opacity-10'>
+          <div className='fixed flex w-full -z-20 left-0 top-[5.5rem] h-52 3xs:h-64 xs:h-80 md:h-96 bg-magenta opacity-10 '>
             <div className='loader z-20'></div>
           </div> :
           <div className='fixed w-full h-52 3xs:h-64 xs:h-80 md:h-96 left-0 top-[5.5rem] overflow-hidden'>
             <img className='w-full h-full -z-20 object-cover duration-200' src={position_data[id].picture} />
           </div>}
-          <div className='absolute left-0 w-full z-10 mt-36 3xs:mt-48 xs:mt-60 md:mt-80 duration-200'>
+          <div className='absolute left-0 w-full z-10 mt-32 3xs:mt-44 xs:mt-60 md:mt-72 duration-200'>
             <div className='inline-block w-full'><div className='mx-auto max-w-[60rem] w-[90%] block'>
                 {!loading && <h1 className={`bg-magenta px-2 sm:px-3 py-1 text-white float-left font-extrabold  ${characterOver35 ? 'md:text-2xl xxs:text-2xl text-xl' : 'text-xl xs:text-2xl md:text-[27px]'} mx-auto`}>{position_data[id].topic}</h1>}
             </div>
             </div>
-            <div className='bg-white pt-3 mt-2'>
-                <div className='mx-auto max-w-[60rem] w-[90%]'>
+            <div className='bg-white pt-3 mt-2 '>
+                <div className='mx-auto max-w-[60rem] w-[90%] min-h-[calc(100vh-26rem)] 3xs:min-h-[calc(100vh-29rem)] xs:min-h-[calc(100vh-32.5rem)] md:min-h-[calc(100vh-36rem)]'>
                 {!loading ?
                 <div>
                     <p className='default-text pb-12 whitespace-pre-line'>

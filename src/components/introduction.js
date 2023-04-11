@@ -8,7 +8,7 @@ const Introduction = () => {
         Wir sind liberale Schüler und sehen uns als eine Vorfeldorganisation der Freien Demokraten und Jungen Liberalen mit programmatischen Schwerpunkt auf Umwelt- und Bildungspolitik.
   
         Unser Ziel ist weltbeste Bildung in Baden-Würtemberg, um sozialen Aufstieg für jeden zu ermöglichen und das Aufstiegsversprechen zu erneuern.
-        <div className='text-default font-bold my-3 flex justify-center bg-white z-3'><Link to="/landesvorstand" ><p className='float-left'>Landesvorstand</p> <ShowMoreCurves className='h-[18px] w-[18px] mt-[5px] ml-1 float-left' /></Link></div>
+        <div className='font-bold my-3 flex justify-center bg-white z-3'><Link to="/landesvorstand" ><p className='float-left'>Landesvorstand</p> <ShowMoreCurves className='h-4 sm:h-[18px] w-4 sm:w-[18px] mt-1 sm:mt-[5px] ml-1 float-left' /></Link></div>
     </div>
   )
 }

@@ -10,7 +10,7 @@ var LS_Satzung = require('../files/LS-Satzung.pdf')
 
 const Footer = ({ absolute = false, portrait = false, landscape = false }) => {
   return(
-    <footer className={`inline-block ${absolute && 'absolute'} ${portrait && 'landscape:hidden'} ${landscape && 'portrait:hidden'} w-full h-28 mt-8 pt-5 bg-white shadow-3xl shadow-black`}>
+    <footer className={`inline-block ${absolute && 'absolute'} ${portrait && 'landscape:hidden'} ${landscape && 'portrait:hidden'} w-full h-28 pt-5 bg-white shadow-3xl shadow-black`}>
       <div className='max-w-[60rem] w-[90%] sm:w-[95%] md:w-[90%] mx-auto pl-1 3xs:pl-0 text-base xxs:text-sm xs:text-base font-bold text-magenta'>
         <div className='w-full flex flex-col 3xs:flex-row xxs:justify-center gap-1 3xs:gap-3 sm:gap-5'>
           <Link to="/impressum">Impressum</Link>

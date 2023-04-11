@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import PositionView from './position_view'
 import { PositionContext } from '../context'
-
+import ShowMoreCurves from '../files/showMoreCurves'
 
 const LP_OurPositions = () => {
     const position_data = useContext(PositionContext)
@@ -35,7 +35,7 @@ const LP_OurPositions = () => {
             </>
             }
         </div>
-        <div className='text-l sm:text-xl font-bold my-2 sm:my-3 flex justify-center bg-white z-3'><Link to="/positionen" >Alle Positionen anzeigen ></Link></div>
+        <div className='default-text font-bold my-4 sm:my-5 flex justify-center bg-white z-3'><Link to="/positionen" ><p className='float-left'>Alle Positionen anzeigen</p> <ShowMoreCurves className='h-4 sm:h-[18px] w-4 sm:w-[18px] mt-1 sm:mt-[5px] ml-1 float-left' /></Link></div>
     </>
   )
 }

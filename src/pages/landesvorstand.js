@@ -11,6 +11,8 @@ const Landesvorstand = () => {
   useEffect(() => {
     document.title = "Landesvorstand - Liberale Schüler BaWü"
     window.scrollTo(0, 0)
+
+    console.log(vorstandData)
   }, []);
   
   return (
@@ -24,7 +26,7 @@ const Landesvorstand = () => {
         <>
           {
             vorstandData.map((data, index) => {
-              return <PersonView name={data.name} role={data.role} img={data.image} content={data.content} link={"/vorstand/" + data.name.toLowerCase() + '&' + index}  />
+              return <PersonView name={data.name} role={data.role} img={data.image_transparent} content={data.content} link={"/vorstand/" + data.name.toLowerCase() + '&' + index}  />
             })
           }
         </> : 
