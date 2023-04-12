@@ -11,7 +11,9 @@ const LP_Input = ({inputData, type, placeholderValue}) => {
 }
 
 const LP_BecomeMember = () => {
-  return (
+
+
+    return (
     <div className='block mt-2 md:mt-4'>
         <p className='inline-block w-full md:w-[55%] lg:w-3/5 default-text md:mt-2 pr-4'>
             Wir Liberalen Schüler wollen Politik und Zeitgeschehen
@@ -36,6 +38,7 @@ const LP_BecomeMember = () => {
             <LP_Input type="text" placeholderValue="PLZ, Ort"/>
             <LP_Input type="text" placeholderValue="E-Mail"/>
             <LP_Input type="text" placeholderValue="Geburtsdatum DD/MM/YYYY"/>
+            <LP_Input type="number" placeholderValue="Voraussichtliches Schulende"/>
             <LP_Input type="number" placeholderValue="Telefonnummer"/>
             <div className='mt-3 text-sm xs:text-base md:text-sm'>
                 <p className='ml-1 inline-block float-left'>Bereits JuLi-Mitglied? </p>
@@ -45,11 +48,11 @@ const LP_BecomeMember = () => {
                 <p className='ml-1 inline-block'>Nein</p>
             </div>
             <div className='mt-1 ml-1'>
-                <input type="checkbox" className='float-left mt-1 mr-2 w-4 h-4 md:w-3 md:h-3' />
-                <p className='text-sm xs:text-base md:text-sm'>Mit der Nutzung dieses Formulars erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch diese Webseite einverstanden.</p>
+                <input type="checkbox" className='float-left mt-1 mr-2 w-4 h-4 md:w-3 md:h-3 cursor-pointer' />
+                <p className='text-sm xs:text-base md:text-sm cursor-pointer'>Mit der Nutzung dieses Formulars erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch diese Webseite einverstanden.</p>
             </div>
             <div className='w-full flex justify-center mt-3 md:mt-2'>
-                <input type="button" value="Absenden" href="#" className='inline-block bg-magenta text-white font-bold px-3 md:px-2 py-2 md:py-1' />
+                <input type="button" value="Mitglied werden" href="#" className='inline-block bg-magenta text-white font-bold px-3 md:px-2 py-2 md:py-1' />
             </div>
         </div>
         
